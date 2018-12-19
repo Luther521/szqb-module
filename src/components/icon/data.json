@@ -1,0 +1,7 @@
+{
+  "name":"字体图标",
+  "data":[
+    {"title":"字体图标","attr":"{}","html":"<icon  value='account_box'></icon>"},
+    {"title":"更大字体图标","attr":"{\"size\":50}","html":"<icon  value='account_box' :size='50'></icon>"}
+  ]
+}

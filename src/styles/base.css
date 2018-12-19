@@ -1,0 +1,366 @@
+@import "normalize.css"; /* == @import "../node_modules/normalize.css/normalize.css"; */
+/* reset */
+html * {
+    outline:none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: system-ui;
+}
+body{
+    color: var(--textColor); 
+    background-color: var(--body-base-bgcolor);
+}
+#app.blur{
+    filter: blur(2px);
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+/* 去掉各 Table  cell 的边距并让其边重合 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 去除默认边框 */
+fieldset, img {
+    border: 0;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul {
+    list-style: none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th {
+    text-align: left;
+}
+
+
+q:before, q:after {
+    content: '';
+}
+/* 正常链接 未访问 */
+a:link {
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {
+    text-decoration: none;
+}
+/* ---------------------single CSS----------------------- */
+/* display */
+.di { display: inline; }
+.db { display: block; }
+.dib { display: inline-block; } /* if the element is block level(eg. div, li), using 'inline-any' instead */
+.dn { display: none; }
+/* height */
+.hp100{height: 100%;}
+/* percent width value */
+.pct20 { width: 20%; }
+.pct25 { width: 25%; }
+.pct30 { width: 30%; }
+.pct33 { width: 33.3%; }
+.pct40 { width: 40%; }
+.pct499{ width: 49.9%; }
+.pct50 { width: 50%; }
+.pct100 { width: 100%; }
+/* line-height */
+.lhp15{line-height: 1.5;}
+.lhp2{line-height: 2;}
+/* margin */
+.m0 { margin: 0 !important; }
+/* 文本颜色 */
+.primary{
+    color:var(--primaryColor);
+}
+.secondary{
+    color:var(--secondaryColor);
+}
+.success{
+    color:var(--successColor);
+}
+.warning{
+    color:var(--warningColor);
+}
+.error{
+    color:var(--errorColor);
+}
+.info{
+    color:var(--infoColor);
+}
+.track{
+    color:var(--trackColor);
+} 
+
+/* font-size */
+.f0 { font-size: 0; }
+/* font-style */
+.n { font-weight: normal; font-style: normal; }
+.b { font-weight: bold; }
+.i { font-style: italic; }
+/* text-align */
+.tc { text-align: center; }
+.tr { text-align: right; }
+.tl { text-align: left; }
+.tj { text-align: justify; }
+/* text-decoration */
+.tdl { text-decoration: underline; }
+.tdn, .tdn:hover, .tdn a:hover, a.tdl:hover { text-decoration: none; }
+/* white-space */
+.nowrap { white-space: nowrap; }
+/* word-wrap */
+.bk { word-wrap: break-word; }
+/* vertical-align */
+.vm { vertical-align: middle; }
+.vtb { vertical-align: text-bottom; }
+.vb { vertical-align: bottom; }
+.vt { vertical-align: top; }
+/* float */
+.l { float: left; }
+.r { float: right; }
+/* clear */
+.cl { clear: both; }
+/* position */
+.rel { position: relative; }
+.abs { position: absolute; }
+/*z-index*/
+.zx1 { z-index: 1; }
+.zx2 { z-index: 2; }
+/* cursor */
+.poi { cursor: pointer; }
+.def { cursor: default; }
+/* overflow */
+.ovh { overflow: hidden; }
+.ova { overflow: auto; }
+/* visibility */
+.vh { visibility: hidden; }
+.vv { visibility: visible; }
+/* zoom */
+.z { *zoom: 1; }
+/* ------------------- multiply CSS ------------------ */
+/* 块状元素水平居中 */
+.auto { margin-left: auto!important; margin-right: auto!important; }
+/* 单行文字溢出虚点显 示*/
+.ell { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+/* css3过渡动画效果 */
+.trans { 
+    -webkit-transition: all 0.3s;   
+    transition: all 0.3s; 
+}
+/* 无框文本框文本域 */
+.bd-none { border: 0; outline: none; }
+/* 绝对定位隐藏 */
+.abs-out { position: absolute; left: -999em; top: -999em; }
+.abs-clip { position: absolute; clip: rect(0 0 0 0); }
+/*inline-block与float等宽列表*/
+.inline-box { font-size: 1em; letter-spacing: -.25em; font-family: Arial; }
+.inline-two, .inline-three, .inline-four, .inline-five, .inline-six, .inline-any { display: inline-block; *display: inline; letter-spacing: 0; vertical-align: top; *zoom: 1; }
+.float-two, .float-three, .float-four, .float-five, .float-six { float: left; }
+.inline-two, .float-two { width: 49.9%; }
+.inline-three, .float-three { width: 33.3%; }
+.inline-four, .float-four { width: 24.9%; }
+.inline-five, .float-five { width: 19.9%; }
+.inline-six, .float-six { width: 16.6%; }
+.inline-fix { display: inline-block; width: 100%; height: 0; overflow: hidden; }
+/*清除浮动*/
+.clearfix:after { content:".";font-size: 0; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+/* Prettier Links */
+a.udl-h:hover{text-decoration: underline;}
+/*当a元素没有文本值，但 href 属性有链接的时候显示链接：*/
+a[href^="http"]:empty::before {content: attr(href);}
+/*=============================================
+=            常见功能样式            =
+=============================================*/
+/* 修复Viewport Units Buggyfill中使用content导致的副作用 */
+img {
+    content: normal !important;
+}
+/* 比例容器 */
+[aspectratio] {
+    position: relative;
+}
+
+[aspectratio]::before {
+    content: '';
+    display: block;
+    width: 1px;
+    margin-left: -1px;
+    height: 0;
+}
+[aspectratio-content] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*----------  flex功能  ----------*/
+
+[flexcontainer]{
+    display: flex;
+}
+
+/**
+ *
+ * 容器属性flex-direction row(默认)|row-reverse|column|column-reverse
+ *
+ */
+
+@each $item in row, row-reverse, column, column-reverse {
+    [flex-direction-$(item)] {
+        flex-direction: $(item);
+    }
+}
+ 
+/**
+ *
+ * 容器属性flex-wrap nowrap(默认)|wrap|wrap-reverse
+ *
+ */
+@each $item in nowrap, wrap, wrap-reverse {
+    [flex-wrap-$(item)] {
+        flex-wrap: $(item);
+    }
+}
+
+/**
+ *
+ * 容器属性justify-content flex-start（默认），flex-end，center，space-between，space-around。
+ *
+ */
+@each $item in flex-start, flex-end, center, space-between, space-around {
+    [justify-content-$(item)] {
+        justify-content: $(item);
+    }
+}
+
+/**
+ *
+ * 容器属性align-items flex-start|flex-end|center|baseline|stretch
+ *
+ */
+@each $item in flex-start, flex-end, center, baseline, stretch {
+    [align-items-$(item)] {
+        align-items: $(item);
+    }
+}
+
+/**
+ *
+ * 容器属性align-content flex-start（默认），flex-end，center，space-between，space-around。
+ *
+ */
+@each $item in flex-start, flex-end, center, space-between, space-around {
+    [align-content-$(item)] {
+        align-content: $(item);
+    }
+}
+
+
+/**
+ *
+ * 子元素属性align-self  auto，flex-start|flex-end|center|baseline|stretch
+ *
+ */
+@each $item in auto, flex-start, flex-end, center, baseline, stretch {
+    [align-self-$(item)] {
+        align-self: $(item);
+    }
+}
+
+  /* @svg{
+    @rect {
+      fill: var(--color, black);
+      width: 100%;
+      height: 50%;
+    }
+  }
+  .border-1 {
+    border: 1px solid transparent;
+    border-image: svg(1px-border param(--color #00b1ff)) 2 2 stretch;
+  } */
+  /* 1像素边框 */
+  .bt1{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-color:var(--border-color);
+        display: block;
+        top:0;
+        left: 0;
+        right: auto;
+        height: 1px;
+        width: 100%;
+        transform-origin: 0 0;
+        transform: scaleY(.5);
+    }
+  }
+  .bd1{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-color:var(--border-color);
+        display: block;
+        bottom:0;
+        left: 0;
+        right: auto;
+        height: 1px;
+        width: 100%;
+        transform-origin: 0 0;
+        transform: scaleY(.5);
+    }
+  }
+  .bl1{
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        background-color:var(--border-color);
+        display: block;
+        bottom:0;
+        left: 0;
+        right: auto;
+        height: 100%;
+        width: 1px;
+        transform-origin: 0 0;
+        transform: scaleX(.5);
+    }
+  }
+  .br1{
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        background-color:var(--border-color);
+        display: block;
+        bottom:0;
+        left: auto;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        transform-origin: 0 0;
+        transform: scaleX(.5);
+    }
+  }
+/*=====  End of 常见功能样式  ======*/
+
+
+
+

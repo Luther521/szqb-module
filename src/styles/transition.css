@@ -1,0 +1,246 @@
+/* modal */
+.v-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #000;
+}
+.v-modal-enter {
+  animation: v-modal-in .2s ease;
+}
+
+.v-modal-leave {
+  animation: v-modal-out .2s ease forwards;
+}
+
+@keyframes v-modal-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+  }
+}
+
+@keyframes v-modal-out {
+  0% {
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* msgbox */
+.msgbox-fade-enter-active {
+  animation: msgbox-fade-in .3s;
+}
+
+.msgbox-fade-leave-active {
+  animation: msgbox-fade-out .3s;
+}
+
+@keyframes msgbox-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes msgbox-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}
+/* loading */
+.vc-loading{
+  animation: rotating 2s linear infinite;
+}
+@keyframes rotating {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+.vc-loading-fade-enter,
+.vc-loading-fade-leave-active {
+  opacity: 0;
+}
+.vc-fade-transition-enter-active,
+.vc-fade-transition-leave-active {
+  transition:   .45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.vc-fade-transition-enter,
+.vc-fade-transition-leave-active {
+  opacity: 0 !important;
+}
+
+.vc-popover-transition-enter-active, .vc-popover-transition-leave-active{
+  transition-duration: 300ms;
+  transition-property: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.vc-popover-transition-enter, .vc-popover-transition-leave-active {
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+.vc-bottom-sheet-transition-enter-active,
+.vc-bottom-sheet-transition-leave-active{
+  transition: transform .45s var(--easeOutFunction);
+  backface-visibility: hidden;
+}
+
+.vc-bottom-sheet-transition-enter,
+.vc-bottom-sheet-transition-leave-active{
+  transform: translate3d(0, 100%, 0);
+}
+
+.vc-slide-top-transition-enter-active,
+.vc-slide-top-transition-leave-active {
+  transition: transform .45s var(--easeOutFunction) opacity .45s var(--easeOutFunction);
+  backface-visibility: hidden;
+}
+
+.vc-slide-top-transition-enter,
+.vc-slide-top-transition-leave-active {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
+
+.vc-slide-bottom-transition-enter-active,
+.vc-slide-bottom-transition-leave-active {
+  transition: transform .45s var(--easeOutFunction) opacity .45s var(--easeOutFunction);
+  backface-visibility: hidden;
+}
+
+.vc-slide-bottom-transition-enter,
+.vc-slide-bottom-transition-leave-active {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
+
+.vc-slide-left-transition-enter-active,
+.vc-slide-left-transition-leave-active {
+  transition: transform .45s var(--easeOutFunction) opacity .45s var(--easeOutFunction);
+  backface-visibility: hidden;
+}
+
+.vc-slide-left-transition-enter,
+.vc-slide-left-transition-leave-active {
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+}
+
+.vc-slide-right-transition-enter-active,
+.vc-slide-right-transition-leave-active {
+  transition: transform .45s var(--easeOutFunction) opacity .45s var(--easeOutFunction);
+  backface-visibility: hidden;
+}
+
+.vc-slide-right-transition-enter,
+.vc-slide-right-transition-leave-active {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
+}
+
+.vc-scale-transition-enter-active,
+.vc-scale-transition-leave-active {
+  transition: all .45s var(--easeOutFunction);
+  backface-visibility: hidden;
+}
+
+.vc-scale-transition-enter,
+.vc-scale-transition-leave-active {
+  transform: scale(0);
+  opacity: 0;
+}
+
+
+
+/*=============================================
+=            页面切换样式            =
+=============================================*/
+.page-enter-active,
+.page-leave-active,
+.ios .page-enter-active,
+.ios .page-leave-active
+{
+  transition-duration: var(--ios-transition-duration);
+  transition-timing-function: var(--ios-transition-timing-function);
+  transition-property: opacity, transform;
+}
+
+.android .page-enter-active,
+.android .page-leave-active
+{
+  transition-duration: var(--android-transition-duration);
+  transition-timing-function: var(--android-transition-timing-function);
+}
+
+[transition-direction="forward"] {
+  & .page-enter {
+    transform: translate3d(100%, 0, 0);
+    opacity: 1;
+    z-index: 2;
+  }
+  & .page-enter-active {
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+  }
+  & .page-enter-to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    z-index: 2;
+  }
+  & .page-leave {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    z-index: 1;
+  }
+  & .page-leave-to {
+    transform: translate3d(-33%, 0, 0);
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+[transition-direction="back"] {
+  & .page-enter {
+    transform: translate3d(-33%, 0, 0);
+    opacity: 0.8;
+    z-index: 1;
+  }
+  & .page-enter-to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    z-index: 1;
+  }
+  & .page-leave {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    z-index: 2;
+  }
+  & .page-leave-active {
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+  }
+  & .page-leave-to {
+    transform: translate3d(100%, 0, 0);
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+

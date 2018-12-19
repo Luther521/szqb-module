@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>vw-layout</title>
+  </head>
+  <script src="https://cdn.bootcss.com/viewport-units-buggyfill/0.6.2/viewport-units-buggyfill.hacks.min.js"></script>
+  <script src="https://cdn.bootcss.com/viewport-units-buggyfill/0.6.2/viewport-units-buggyfill.min.js"></script>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+  // vw兼容性处理viewport-units-buggyfill
+  window.onload = function() {
+    window.viewportUnitsBuggyfill.init({ hacks: window.viewportUnitsBuggyfillHacks })
+    // 以下代码用户测试
+    // var winDPI = window.devicePixelRatio
+    // var uAgent = window.navigator.userAgent
+    // var screenHeight = window.screen.height
+    // var screenWidth = window.screen.width
+    // var winWidth = window.innerWidth
+    // var winHeight = window.innerHeight
+    // console.log("Windows DPI:" + winDPI + "\ruAgent:" + uAgent + "\rScreen Width:" +
+    //   screenWidth + "\rScreen Height:" + screenHeight + "\rWindow Width:" + winWidth +
+    //   "\rWindow Height:" + winHeight)
+  }
+  </script>
+</html>

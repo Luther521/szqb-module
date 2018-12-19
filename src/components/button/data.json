@@ -1,0 +1,15 @@
+{
+  "name":"按钮",
+  "data":[
+    {"title":"按钮","attr":"{}","html":"<vc-button>按钮</vc-button>"},
+    {"title":"圆角按钮","attr":"{\"round\":true}","html":"<vc-button round>圆角按钮</vc-button>"},
+    {"title":"块级按钮","attr":"{\"block\":true}","html":"<vc-button block>块级按钮</vc-button>"},
+    {"title":"图标按钮","attr":"{\"icon\":\"spinner6\"}","html":"<vc-button icon='spinner6'>图标按钮</vc-button>"},
+    {"title":"加载中","attr":"{\"loading\":true}","html":"<vc-button  :loading='true' >加载中</vc-button>"},
+    {"title":"更大号按钮","attr":"{\"size\":50}","html":"<vc-button  :size='50' >更大号按钮</vc-button>"},
+    {"title":"修改字体颜色","attr":"{\"color\":\"#252526\"}","html":"<vc-button  :color='#252526' >修改字体颜色</vc-button>"},
+    {"title":"纯色按钮","attr":"{\"bgcolor\":\"#252526\"}","html":"<vc-button  :bgcolor='#252526' >纯色按钮</vc-button>"},
+    {"title":"朴素按钮","attr":"{\"plain\":true}","html":"<vc-button  plain >朴素按钮</vc-button>"},
+    {"title":"颜色朴素按钮","attr":"{\"plain\":true,\"color\":\"#252526\"}","html":"<vc-button :color='#252526' plain >朴素按钮</vc-button>"}
+  ]
+}

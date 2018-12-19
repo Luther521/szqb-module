@@ -1,0 +1,51 @@
+@import "./color.css";
+:root{
+--fontFamily: Roboto, Lato, sans-serif;
+
+
+--primaryColor: var(--blue);
+--secondaryColor: var(--pinkA200);
+--successColor: var(--green);
+--warningColor: var(--yellow600;);
+--errorColor: var(--red);
+--infoColor: var(--blue);
+--trackColor: var(--grey400);
+
+
+--textColor: var(--darkBlack);
+--secondaryTextColor: color(var(--fullBlack) a(54%));
+--alternateTextColor: var(--white);
+--borderColor: color(var(--fullBlack) a(12%));
+--disabledColor: color(var(--fullBlack) a(38%));
+
+--backgroundColor: var(--grey50);
+--dialogBackgroundColor: var(--white);
+--chipBackgroundColor: var(--grey300);
+--activeIconColor: color(var(--fullBlack) a(54%));
+--inActiveIconColor: color(var(--fullBlack) a(38%));
+
+--iconSize: 24px;
+--border-color:#dcdcdc;
+--input-placeholder:#c9c9c9;
+
+--body-base-bgcolor:#f5f5f5;
+
+--ios-transition-duration:              500ms !default;
+--ios-transition-timing-function:       cubic-bezier(.36, .66, .04, 1) !default;
+--android-transition-duration:          200ms !default;
+--android-transition-timing-function:   cubic-bezier(0.4, 0.6, 0.2, 1) !default;
+--easeOutFunction: cubic-bezier(0.23, 1, 0.32, 1);
+--easeInOutFunction: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+--button-base-color:#fff;
+--button-base-font-size: 36px;
+--button-base-font-family: pingfang SC;
+--button-linear-gradient-left-color:#5392ff;
+--button-linear-gradient-right-color:#165fe6;
+--button-box-shadow:0px 1px 10px color(#4084ff alpha(-10%));
+
+--item-base-color:#222;
+--item-base-font-size: 28px;
+--item-base-icon-color: #e2e2e2;
+--item-border-color: #dcdcdc;
+}
